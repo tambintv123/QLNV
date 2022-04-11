@@ -38,6 +38,12 @@ const getInfo = () => {
       "(*) Tài khoản phải từ 4 đến 6 ky so",
       4,
       6
+    ) &&
+    validation.kiemTraTrung(
+      _taiKhoan,
+      "tbTKNV",
+      "(*) Tài khoản đã tồn tại",
+      dsnv.dsNhanVien
     );
 
   isValid &= validation.kiemTraRong(_ten, "tbTen", "Tên không được để trống");
